@@ -4,20 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm-run-all -p tscompile nodewatch",
+    "tscompile": "tsc --watch --preserveWatchOutput",
+    "nodewatch": "nodemon dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/felixHerder/design-patterns.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/felixHerder/design-patterns/issues"
-  },
-  "homepage": "https://github.com/felixHerder/design-patterns#readme",
   "dependencies": {
-    "tsc": "^2.0.4"
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.5.5"
   }
 }
